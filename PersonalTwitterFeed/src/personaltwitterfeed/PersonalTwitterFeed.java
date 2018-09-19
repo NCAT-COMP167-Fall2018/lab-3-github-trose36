@@ -30,19 +30,12 @@ public class PersonalTwitterFeed {
         return stamp;
     }
     
-    
-    
-    public static void main(String[] args) {
-      
-        String[] tweets = new String[MAX_NUMBER_TWEETS];
+    public static void newTweet(String tweeterName){
+        
+         String[] tweets = new String[MAX_NUMBER_TWEETS];
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("Welcome to your personal Twitter!");
-        System.out.println("What's your name, tweeter?");
+       
         
-        String tweeterName = keyboard.nextLine();
-        
-        System.out.println("Nice to meet you " + tweeterName + "!");
-        System.out.println("Enter your tweets and I will add them to your timeline!");
         
         int numTweets = 0;
         
@@ -65,6 +58,26 @@ public class PersonalTwitterFeed {
         }
         
         System.out.println("Your twitter feed is full");
+        
+    }
+    
+    
+    
+    public static void main(String[] args) {
+        
+        Scanner keyboard = new Scanner(System.in);
+        
+        System.out.println("Welcome to your personal Twitter!");
+        System.out.println("What's your name, tweeter?");
+        
+        String tweeterName = keyboard.nextLine();
+        
+        System.out.println("Nice to meet you " + tweeterName + "!");
+        System.out.println("Enter your tweets and I will add them to your timeline!");
+      
+      newTweet(tweeterName);
+        
+       
     }
     
 }
